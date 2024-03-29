@@ -1,13 +1,11 @@
-FROM node:latest
+FROM node:slim
 
 WORKDIR /app
 
-COPY package*.json /app/
+COPY . /app
 
 RUN npm install
 
-COPY . /app
+EXPOSE 8080
 
-EXPOSE 5000
-
-CMD ["npm", "start"]
+CMD node server.js
