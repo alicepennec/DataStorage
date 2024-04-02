@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
-const sqlite3 = require('sqlite3');
+const sqlite3 = require('sqlite3').verbose();
 const axios = require('axios');
 const csv = require('csv-parser');
 const fs = require('fs');
